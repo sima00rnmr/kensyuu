@@ -23,9 +23,9 @@ public class Point {
 	public void Point(int x, int y) {
 
 		//第1引数で渡された値をxフィールドに代入する。
-
+		this.x=x;
 		//第2引数で渡された値をyフィールドに代入する。
-
+		this.y=y;
 	}
 
 	//xフィールドの値を返すメソッド							

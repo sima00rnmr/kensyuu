@@ -7,12 +7,12 @@ package kadai_1;
  * 
  * */
 public interface  Figure {
-	//図形描画機能
+	//図形描画機能の定義							
 	void draw() {
 		
 	}
-	//長さ測定機能
-	void getPerimeter() {
+	//長さ測定機能の定義							
+	double getPerimeter() {
 		
 	}
 
