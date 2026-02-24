@@ -10,37 +10,52 @@ package kadai_1;
 public class Line implements Figure {
 	private Point p1;//・線の始点を表すPoint型privateフィールド
 	private Point p2;//・線の終点を表すPoint型privateフィールド
-		
-	
-	
+
 	/*・引数なしコンストラクタの定義
 	 *・p1(x,y座標)、p2(x,y座標)全て0で初期化する。*/
-	public void Line() {
-		
-		Point p1 = new Point();
-		Point p2 = new Point();
-		
+	public Line() {
+		this.p1 = new Point(0, 0);
+		this.p2 = new Point(0, 0);
+
 	}
+
 	/*引数で受け取ったデータを用いて、
 	 * 2つのPointオブジェクトを生成。
 	 * p1フィールドとp2フィールドに
-     * それぞれを代入する。						
+	 * それぞれを代入する。						
 	 * 
 	 * */
-	public Line(int x1,int y1,int x2,int y2) {
-		Point p1 =new Point(int x1,int y1);
-		Point p2 =new Point(int x2,int y2);
-		 
-	
+	public void Line(int x1, int y1, int x2, int y2) {
+
+		Point p1 = new Point(x1, y1);
+		Point p2 = new Point(x2, y2);
+
 	}
+
+	/*以下のようなメッセージを表示する。
+	 * なお、始点をp1、終点をp2とする。
+	 * 出力例：
+	　       * "[線を描画] 始点(0,0)から終点(100,100)まで"							
+	 * 
+	 * */
 	public void draw() {
-		System.out.println("[線を描画]始点"+this.p1+"から終点"+this.p2+"まで");
-		
-		
+		System.out.println("[線を描画]始点" + this.p1 + "から終点" + this.p2 + "まで");
 	}
+
+	/*"始点データと終点データを使い、
+	 * 以下の計算式で算出した結果を返す。
+	 *(( 終点のx座標 - 始点のx座標 ) ^2+ ( 終点のy座標 - 始点のy座標 ) ^2 ) の平方根					
+	 * 累　乗...Math.powメソッド
+	 * 平方根...Math.sqrtメソッド"	
+	 * 
+	 * */
 	public double getPerimeter() {
-		
-		
+
+		double XPoint = Math.pow((p2.x - p1.x), 2);
+		double YPoint = Math.pow((p2.y - p1.y), 2);
+		double Perimeter = Math.sqrt(XPoint + YPoint);
+
+		return Perimeter;
 		/*個人的メモ
 		 * Math.powメソッド（累乗）
 		 * double result = Math.pow(10, 2);　//10を二乗している
@@ -49,7 +64,7 @@ public class Line implements Figure {
 		 * double result = Math.sqrt(16.0);　//結果4.0
 		 * 
 		 * */
-		
+
 	}
-	
+
 }

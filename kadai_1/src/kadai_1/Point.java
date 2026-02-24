@@ -13,14 +13,14 @@ public class Point {
 	/*"・引数なしコンストラクタの定義
 	　   *x座標、y座標ともに0で初期化する。"							
 	 * */
-	public void Point() {
+	public Point() {
 		x = 0;
 		y = 0;
 	}
 
 	/* x座標、y座標を受け取りその値で初期化するコンストラクタの定義					
 	 */
-	public void Point(int x, int y) {
+	public Point(int x, int y) {
 
 		//第1引数で渡された値をxフィールドに代入する。
 		this.x=x;

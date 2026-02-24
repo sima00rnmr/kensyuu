@@ -9,5 +9,27 @@ package kadai_1;
  * */
 
 public class Rectangle extends Polygon {
+	protected Point p; //長方形の基準の位置を表すPoint型protectedフィールド
+	protected int width; //長方形の横幅を表すprotectedフィールド
+	protected int height; //長方形の縦幅を表すprotectedフィールド
+	
+	public void Rectangle(int x, int y, int width, int height) {
+		
+		
+	}
+	
+	
+	public void draw() {
+	
+		
+	}
+	
+	public double getPerimeter() {
+	
+		return 0;
+	}
+	
+	
+	
 
 }
