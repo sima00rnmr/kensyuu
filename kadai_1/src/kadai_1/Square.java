@@ -7,10 +7,9 @@ package kadai_1;
  * */
 public class Square extends Rectangle {
 
-	public void Square(int x, int y, int width) {
-		Point p = new Point(x, y);//pフィールドに代入するPoint型変数のx,y座標値
-		this.width = width;//正方形の一辺の長さ
-
+	public Square(int x, int y, int width) {
+		super(x,y,width,width);
+		
 	}
 
 	/*以下のメッセージを表示
@@ -18,7 +17,7 @@ public class Square extends Rectangle {
 	 * 
 	 * */
 	public void draw() {
-		System.out.println(" [正方形を描画] 点(" + this.p + ")を基準として幅・高さ" + width + "の正方形");
+		System.out.println(" [正方形を描画] 点(" + p.getX()+","+p.getY() + ")を基準として幅・高さ" + width + "の正方形");
 
 	}
 

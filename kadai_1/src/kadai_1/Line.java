@@ -25,10 +25,10 @@ public class Line implements Figure {
 	 * それぞれを代入する。						
 	 * 
 	 * */
-	public void Line(int x1, int y1, int x2, int y2) {
+	public Line(int x1, int y1, int x2, int y2) {
 
-		Point p1 = new Point(x1, y1);
-		Point p2 = new Point(x2, y2);
+		this.p1 = new Point(x1, y1);
+		this.p2 = new Point(x2, y2);
 
 	}
 
@@ -39,7 +39,7 @@ public class Line implements Figure {
 	 * 
 	 * */
 	public void draw() {
-		System.out.println("[線を描画]始点" + this.p1 + "から終点" + this.p2 + "まで");
+		System.out.println("[線を描画]始点(" + p1.getX()+","+p1.getY() + ")から終点(" + p2.getX()+","+p2.getY() + ")まで");
 	}
 
 	/*"始点データと終点データを使い、

@@ -29,7 +29,7 @@ public class Point {
 	}
 
 	//xフィールドの値を返すメソッド							
-	public int getX(int x) {
+	public int getX() {
 		return this.x;
 	}
 
@@ -40,7 +40,7 @@ public class Point {
 	}
 
 	//xフィールドの値を返すメソッド							
-	public int getY(int y) {
+	public int getY() {
 		return this.y;
 	}
 

@@ -24,8 +24,8 @@ public class Circle extends Shape {
 	 * xとy...centerフィールドに代入するPoint型変数のx,y座標値
 	 * r...円の半径
 	 * */
-	public void Circle(int x, int y, int r) {
-		Point center = new Point(x, y);
+	public  Circle(int x, int y, int r) {
+		this.center = new Point(x, y);
 		this.radius = r;
 
 	}
@@ -33,8 +33,9 @@ public class Circle extends Shape {
 	/*以下のメッセージを表示
 	 * 　"[円を描画] 中心点(100,100)から半径20"
 	 * */
+	
 	public void draw() {
-		System.out.println("[円を描画] 中心点(" + this.center + "から半径" + this.radius);
+		System.out.println("[円を描画] 中心点(" + center.getX()+","+center.getY() + ")から半径" + radius);
 
 	}
 

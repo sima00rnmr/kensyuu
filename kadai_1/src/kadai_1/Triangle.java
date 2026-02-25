@@ -18,11 +18,11 @@ public class Triangle extends Polygon {
 	 * 
 	 * ・angleフィールドに3を代入する。
 	 * */
-	public void Triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
-		Point p1 = new Point(x1, y1);//p1フィールドに代入するPoint型変数のx,y座標
-		Point p2 = new Point(x2, y2);//p2フィールドに代入するPoint型変数のx,y座標
-		Point p3 = new Point(x3, y3);//p3フィールドに代入するPoint型変数のx,y座標
-		int angle = 3; //angleフィールドに3を代入
+	public Triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+		this.p1 = new Point(x1, y1);//p1フィールドに代入するPoint型変数のx,y座標
+		this.p2 = new Point(x2, y2);//p2フィールドに代入するPoint型変数のx,y座標
+		this.p3 = new Point(x3, y3);//p3フィールドに代入するPoint型変数のx,y座標
+		this.angle = 3; //angleフィールドに3を代入
 
 	}
 
@@ -31,7 +31,8 @@ public class Triangle extends Polygon {
 	 * [三角形を描画] 点1(0,0)から点2(100,100)、点3(0, 200)の三角形
 	 * */
 	public void draw() {
-		System.out.println("[三角形を描画] 点1(" + this.p1 + ")から点2(" + this.p2 + ")、点3(" + this.p3 + ")の三角形");
+		System.out.println("[三角形を描画] 点1(" + p1.getX() + "," + p1.getY() + ")から点2(" + p2.getX() + "," + p2.getY()
+				+ ")、点3(" + p3.getX() + "," + p3.getY() + ")の三角形");
 
 	}
 
@@ -40,15 +41,15 @@ public class Triangle extends Polygon {
 	 * p1からp2までの長さ + p2からp3までの長さ + p3からp1までの長さ
 	 * */
 	public double getPerimeter() {
-			//p1、p2間の長さ
-		double XPoint_1 = Math.pow((p2.x - p1.x), 2);
-		double YPoint_1 = Math.pow((p2.y - p1.y), 2);
-			//p1、p3間の長さ
-		double XPoint_2 = Math.pow((p3.x - p1.x), 2);
-		double YPoint_2 = Math.pow((p3.y - p1.y), 2);
-			//p2、p3間の長さ
-		double XPoint_3 = Math.pow((p3.x - p2.x), 2);
-		double YPoint_3 = Math.pow((p3.y - p2.y), 2);
+		//p1、p2間の長さ
+		double XPoint_1 = Math.pow((p2.getX() - p1.getX()), 2);
+		double YPoint_1 = Math.pow((p2.getY() - p1.getY()), 2);
+		//p1、p3間の長さ
+		double XPoint_2 = Math.pow((p3.getX() - p1.getX()), 2);
+		double YPoint_2 = Math.pow((p3.getY() - p1.getY()), 2);
+		//p2、p3間の長さ
+		double XPoint_3 = Math.pow((p3.getX() - p2.getX()), 2);
+		double YPoint_3 = Math.pow((p3.getY() - p2.getY()), 2);
 
 		double Perimeter = Math.sqrt(XPoint_1 + YPoint_1) + Math.sqrt(XPoint_2 + YPoint_2)
 				+ Math.sqrt(XPoint_3 + YPoint_3);
