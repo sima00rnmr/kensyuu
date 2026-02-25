@@ -30,8 +30,8 @@ public class Rectangle extends Polygon {
 	 * 
 	 * */
 	public void draw() {
-		System.out.println(" [長方形(矩形)を描画] 点(" +p.getX()+","+p.getY() + ")を基準として幅" + width + "、高さ" + height + "の長方形");
-
+		System.out.println("[長方形(矩形)を描画] 点(" +p.getX()+","+p.getY() + ")を基準として幅" + width + "、高さ" + height + "の長方形");
+		System.out.flush();
 	}
 
 	/*

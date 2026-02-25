@@ -22,9 +22,10 @@ public class Main {
 			/*int r=20;
 			int x=100;
 			int y=100;*/
-			Circle c = new Circle(100, 100, 20);
-			c.draw();
-
+			Circle circle = new Circle(100, 100, 20);
+			circle.draw();
+			System.out.println("周囲の長さは、"+circle.getPerimeter());
+			
 		}
 		/*図形描画[ 0:円 2:線 3:三角形 4:長方形 44:正方形 ] : >2
 		  [線を描画] 始点(0,0)から終点(100,100)まで
@@ -36,8 +37,9 @@ public class Main {
 			int y1=0;
 			int x2=100;
 			int y2=100;*/
-			Line l = new Line(0,0,100,100);
-			l.draw();
+			Line line = new Line(0,0,100,100);
+			line.draw();
+			System.out.println("周囲の長さは、"+line.getPerimeter());
 
 		}
 		case 3 -> {
@@ -47,9 +49,10 @@ public class Main {
 			int y2=100;
 			int x3=0;
 			int y3=200;*/
-			Triangle t = new Triangle(0,0,100,100,0,200);
-			t.draw();
-
+			Triangle triangle = new Triangle(0,0,100,100,0,200);
+			triangle.draw();
+			System.out.println("周囲の長さは、"+triangle.getPerimeter());
+			System.out.println("内角の和は、"+(triangle.angle-2)*180);
 		}
 		case 4 -> {
 			/*int x1=0;
@@ -58,17 +61,19 @@ public class Main {
 			int y2=100;
 			int width = 100;
 			int height = 50;*/
-			System.out.println("4を呼び出し");
-			Rectangle re = new Rectangle(100,100,100,50);
-			re.draw();
+			Rectangle rectangle = new Rectangle(100,100,100,50);
+			rectangle.draw();
+			System.out.println("周囲の長さは、"+rectangle.getPerimeter());
+			System.out.println("内角の和は、"+(rectangle.angle-2)*180);
 		}
 		case 44 -> {
 			/*int x=100;
 			int y=100;
 			int width = 200;*/
-			System.out.println("44を呼び出し");
-			Square s = new Square(100,100,200);
-			s.draw();
+			Square square = new Square(100,100,200);
+			square.draw();
+			System.out.println("周囲の長さは、"+square.getPerimeter());
+			System.out.println("内角の和は、"+(square.angle-2)*180);
 		}
 		default -> {
 			System.out.println("未対応の番号です");
